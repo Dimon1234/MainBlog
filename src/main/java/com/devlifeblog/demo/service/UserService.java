@@ -1,8 +1,8 @@
 package com.devlifeblog.demo.service;
 
+import com.devlifeblog.demo.domain.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.diomonjeelife.Blog.domain.UserRepository;
 
 @Service
 public class UserService {

@@ -1,10 +1,10 @@
 package com.devlifeblog.demo.service;
 
+import com.devlifeblog.demo.domain.ArticleRepository;
+import com.devlifeblog.demo.model.Article;
+import com.devlifeblog.demo.model.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.diomonjeelife.Blog.domain.ArticleRepository;
-import ru.diomonjeelife.Blog.model.Article;
-import ru.diomonjeelife.Blog.model.Blog;
 
 import java.util.List;
 
