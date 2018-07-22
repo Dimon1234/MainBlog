@@ -14,6 +14,10 @@ public class BlogUser {
     @Column(unique = true)
     private String login;
 
+    @OneToOne
+    @JoinColumn(name = "blog_id")
+    private Blog blog;
+
     @Column(unique = true)
     private String mail;
 

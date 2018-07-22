@@ -4,6 +4,7 @@ import com.devlifeblog.demo.model.enums.ArticleType;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,10 @@ public class Article {
     @Column(length = 2048)
     private String text;
 
+    @Enumerated(EnumType.STRING)
     private ArticleType articleType;
+
+    private LocalDateTime dateTime;
 
     @OneToMany(mappedBy = "article")
     private List<Comment> comments;

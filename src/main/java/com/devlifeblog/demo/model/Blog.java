@@ -10,10 +10,9 @@ import java.util.List;
 @Data
 public class Blog {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     @Column(unique = true)
+    private String blogLink;
+
     private String blogName;
 
     @OneToOne
