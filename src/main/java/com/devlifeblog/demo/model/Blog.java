@@ -10,6 +10,9 @@ import java.util.List;
 @Data
 public class Blog {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @Column(unique = true)
     private String blogLink;
 
@@ -17,7 +20,7 @@ public class Blog {
 
     @OneToOne
     @JoinColumn(name = "user_id")
-    private BlogUser blogUser;
+    private User user;
 
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
     private List<Article> articles;

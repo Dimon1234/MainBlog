@@ -13,7 +13,7 @@ public class Comment {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private BlogUser blogUser;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "article_id")

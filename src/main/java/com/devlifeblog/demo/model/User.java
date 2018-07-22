@@ -1,12 +1,13 @@
 package com.devlifeblog.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
 
-@Entity
 @Data
-public class BlogUser {
+@Entity(name = "blog_user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -16,6 +17,7 @@ public class BlogUser {
 
     @OneToOne
     @JoinColumn(name = "blog_id")
+    @JsonIgnore
     private Blog blog;
 
     @Column(unique = true)
