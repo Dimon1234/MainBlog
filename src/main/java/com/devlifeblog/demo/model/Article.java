@@ -1,5 +1,6 @@
 package com.devlifeblog.demo.model;
 
+import com.devlifeblog.demo.model.enums.ArticleType;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -16,6 +17,11 @@ public class Article {
     private String mainCaption;
 
     private String subCaption;
+
+    @Column(length = 2048)
+    private String text;
+
+    private ArticleType articleType;
 
     @OneToMany(mappedBy = "article")
     private List<Comment> comments;
